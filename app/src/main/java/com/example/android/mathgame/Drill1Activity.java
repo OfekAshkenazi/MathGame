@@ -37,7 +37,7 @@ public class Drill1Activity extends AppCompatActivity {
                 long answer=Long.parseLong(answerET.getText().toString());
                 if (answer==getAnswer(questionTV.getText().toString())){
                     nextActivity=new Intent(view.getContext(),Drill2Activity.class);
-
+                    startActivity(nextActivity);
                 }
             }
         });
