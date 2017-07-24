@@ -12,6 +12,7 @@
         <uses-feature
             android:name="android.hardware.camera"
             android:required="true" />
+
         <activity android:name=".ActivitySignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,11 @@
         </activity>
         <activity android:name=".Drill1Activity" />
         <activity android:name=".Drill2Activity" />
-        <activity android:name=".Drill3Activity"></activity>
+        <activity android:name=".Drill3Activity" />
+        <activity android:name=".GameOverActivity">
+        </activity>
+        <activity android:name=".ActivityEnd">
+        </activity>
     </application>
 
 </manifest>

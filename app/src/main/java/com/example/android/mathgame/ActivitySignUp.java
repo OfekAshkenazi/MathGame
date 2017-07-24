@@ -23,7 +23,7 @@ public class ActivitySignUp extends AppCompatActivity {
     EditText nameET;
     ImageView imageView;
     static final int CAMERA_REQUEST=1;
-    public static User user=new User();
+    private static User user=new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class ActivitySignUp extends AppCompatActivity {
         nameET=(EditText) findViewById(R.id.nameET);
         imageView=(ImageView) findViewById(R.id.imageView);
         setImageButton();
+        setStartBtn();
 
     }
 
@@ -59,7 +60,7 @@ public class ActivitySignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (nameET.getText().toString().equals("")||!hasImage(imageView)) {
-                    Toast.makeText(ActivitySignUp.this, "please make sure you entered your name and took a photo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivitySignUp.this, "please make sure you entered your name and took a photo", Toast.LENGTH_LONG).show();
                     return;
                 }
                 String name=nameET.getText().toString();
@@ -81,6 +82,10 @@ public class ActivitySignUp extends AppCompatActivity {
         }
 
         return hasImage;
+    }
+
+    public static User getUser() {
+        return user;
     }
 }
 
